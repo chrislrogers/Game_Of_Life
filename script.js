@@ -5,7 +5,6 @@ const delaySlider = document.getElementById("delay");
 
 let canvasSize = 500;
 let grid = 10;
-let scale;
 let world;
 let cols, rows;
 let delay = 200;
@@ -65,7 +64,6 @@ delaySlider.oninput = function () {
 function init() {
     canvas.width = canvasSize;
     canvas.height = canvasSize;
-    scale = canvasSize / grid;
     cols = canvas.width / grid;
     rows = canvas.height / grid;
     world = populateState(createState());
